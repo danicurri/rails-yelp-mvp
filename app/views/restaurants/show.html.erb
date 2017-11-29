@@ -1,5 +1,7 @@
-<h1>this is my restaurant</h1>
+<h1>this is the restaurant:</h1>
   <p> <%= @restaurant.name%></p>
   <p><%= @restaurant.address%></p>
-  <%= link_to "back to index", restaurants_path %>
+  <p> <%= @restaurant.phone_number.to_i %> </p>
+  <p> <%= @restaurant.category %> </p>
+<%= link_to "back to index", restaurants_path %>
 
