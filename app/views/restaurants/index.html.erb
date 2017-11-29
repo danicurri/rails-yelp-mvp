@@ -6,11 +6,11 @@
   <p> <%= restaurant.phone_number %> </p>
   <p> <%= restaurant.category %> </p>
 
-   <div><%= link_to "see more details", restaurant_path(restaurant) %></div>
-    <div><%= link_to "create a restaurant",
-    new_restaurant_path %></div>
+   <div><%= link_to "see more details", restaurant_path(restaurant), class: "btn btn-success" %></div>
     <p>************************************</p>
 
 <% end %>
 
+    <div><%= link_to "create a restaurant",
+    new_restaurant_path, class: "btn btn-info" %></div>
 

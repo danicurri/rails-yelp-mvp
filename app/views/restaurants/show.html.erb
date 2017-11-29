@@ -3,5 +3,14 @@
   <p><%= @restaurant.address%></p>
   <p> <%= @restaurant.phone_number.to_i %> </p>
   <p> <%= @restaurant.category %> </p>
-<%= link_to "back to index", restaurants_path %>
+<%= link_to "back to index", restaurants_path,class: "btn btn-success" %>
 
+<p>******************************************</p>
+<p>Here all reviews from a restaurant in a list:</p>
+<% reviews_collection = @restaurant.reviews %>
+<% reviews_collection.each do |review| %>
+ <p> <%= review.content %></p>
+  <p> <%= review.created_at %> </p>
+  <p>******************************</p>
+<% end %>
+<%= link_to "create review", new_restaurant_review_path(@restaurant), class: "btn btn-success" %>
